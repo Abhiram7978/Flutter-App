@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+      io.flutter.embedding.android.EnableOnBackInvokedCallback and similar
+      debug-only flags can go here. Currently no debug-specific overrides
+      beyond what Flutter's debug runner already provides.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
