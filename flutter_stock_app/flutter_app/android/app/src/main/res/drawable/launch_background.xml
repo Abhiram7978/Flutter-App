@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Solid background matching the app's dark theme (AppColors.background
-     = 0xFF0E1117) so there's no white flash between the OS splash and
-     the Flutter UI taking over. -->
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@android:color/black" />
-</layer-list>
