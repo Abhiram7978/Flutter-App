@@ -1,0 +1,12 @@
+# Copy this file to local.properties (no .example suffix) and fill in
+# the paths for YOUR machine. local.properties is machine-specific and
+# must never be committed to version control (it already is in
+# .gitignore for this reason).
+#
+# sdk.dir          — path to your Android SDK installation
+# flutter.sdk      — path to your Flutter SDK installation
+# flutter.versionCode / flutter.versionName — normally set automatically
+#   by `flutter build`, safe to leave unset here.
+
+sdk.dir=/path/to/your/Android/sdk
+flutter.sdk=/path/to/your/flutter
