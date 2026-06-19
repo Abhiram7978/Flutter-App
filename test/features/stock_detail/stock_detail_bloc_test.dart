@@ -105,7 +105,9 @@ void main() {
       setUp: () {
         when(
           () => repository.getStock('RELIANCE', exchange: 'NSE'),
-        ).thenThrow(const NotFoundException('Stock not found', 'STOCK_NOT_FOUND'));
+        ).thenThrow(
+          const NotFoundException.withCode('Stock not found', 'STOCK_NOT_FOUND'),
+        );
       },
       build: () => StockDetailBloc(
         repository: repository,

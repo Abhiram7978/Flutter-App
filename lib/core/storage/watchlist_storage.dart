@@ -14,8 +14,10 @@ class WatchlistStorage {
 
   final SharedPreferences? _prefsOverride;
 
-  Future<SharedPreferences> _prefs() async =>
-      _prefsOverride ?? SharedPreferences.getInstance();
+  Future<SharedPreferences> _prefs() async {
+    if (_prefsOverride != null) return _prefsOverride!;
+    return SharedPreferences.getInstance();
+  }
 
   Future<Set<String>> getTickers() async {
     final prefs = await _prefs();

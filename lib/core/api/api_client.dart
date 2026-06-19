@@ -97,10 +97,9 @@ class ApiClient {
       case 401:
         return const UnauthorizedException();
       case 404:
-        return NotFoundException(
-          message ?? 'Not found.',
-          errorCode,
-        );
+        return errorCode != null
+            ? NotFoundException.withCode(message ?? 'Not found.', errorCode)
+            : NotFoundException(message ?? 'Not found.');
       case 503:
         return const ServiceUnavailableException();
       default:

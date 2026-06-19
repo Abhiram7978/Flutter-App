@@ -35,13 +35,11 @@ final class UnauthorizedException extends ApiException {
 /// 404 — resource not found (e.g. unknown ticker).
 final class NotFoundException extends ApiException {
   const NotFoundException([
-    String message = 'The requested resource was not found.',
-    String? errorCode,
-  ]) : super(message, errorCode: errorCode);
-}
     super.message = 'The requested resource was not found.',
-    super.errorCode,
-  ]);
+  ]) : super(errorCode: null);
+
+  const NotFoundException.withCode(String message, String errorCode)
+      : super(message, errorCode: errorCode);
 }
 
 /// 400/422 — invalid request (bad date range, invalid ticker format, etc).
